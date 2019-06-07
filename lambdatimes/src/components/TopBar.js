@@ -27,7 +27,7 @@ const TopBarStyle = styled.div`
 `;
 
 const TopContainerStyle = styled.div`
-   width: 100%;
+    width: 100%;
     display: flex;
     justify-content: none;
     align-items: none;
@@ -41,7 +41,6 @@ const TopContainerStyle = styled.div`
     }
   }
 `;
-
 
 const TopBarLeft = styled.div`
   display: flex;
