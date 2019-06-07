@@ -88,8 +88,6 @@ const TopBarRight = styled.div`
 `;
 
 
-
-
 const TopBar = () => {
   return (
     <TopBarStyle>
