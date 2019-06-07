@@ -56,8 +56,8 @@ export default class Content extends Component {
   };
 
   render() {
-    console.log(`current state is: ${this.state}`);
-    console.log(`current tabs are: ${this.state.tabs}`);
+    // console.log(`current state is: ${this.state}`);
+    // console.log(`current tabs are: ${this.state.tabs}`);
     return (
       <div className="content-container">
         {/* 
