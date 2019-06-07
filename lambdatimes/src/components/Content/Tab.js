@@ -39,10 +39,8 @@ const Tab = props => {
 // Make sure you include PropTypes on your props.
 
 Tab.propTypes = {
-  tabData: pt.arrayOf(pt.string),
   tab: pt.string,
   selectedTab: pt.string,
-  className: pt.string,
 }
 
 export default Tab;

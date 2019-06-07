@@ -31,6 +31,7 @@ Tabs.PropType = {
   tabs: pt.arrayOf(pt.string),
   tab: pt.string,
   selectedTab: pt.string,
+  selectTabHandler:pt.func,
 
 }
 
