@@ -29,9 +29,21 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes are used for type checking. This is helpful when checking the data to ensue the user is using a function properly. PropTypes are used so we dont have to wirte an if statement in a function to check our data. They make it a lot easier. PropTypes are used to validate the type of data that is being passed as props to that component, at the time its being built. As your component is being constructed  the data you’re passing to that component as props  will be validated through the proptype (eco system). It will not check all of the data only what you are passing as props. This is important as the components become a lot safer form the mistakes devs commonly make. It is an easier way to safeguard ourself from making mistakes when developing.
+
 - [ ] Describe a life-cycle event in React?
+
+A life cycle event in React can be thought of as a human life cycle. We have the Birth/Mounting phase, The growth/Updating phone and the Death/Unmounting phase. The Mounting has e is when the component is being built out from ground and up. The initial data you have access to will be defined on the constructor of this phase and the render method will be invoked. Also the `componentDidMount` gets called as well. The Updating phase is when setState can be used to change the components state data, forcing a call to render. And if you don’t need to render, the `shouldComponentUpdate` is a method that could be used here to stop the component from rendering. And then finally the Unmounting phase where the component is removed from the screen. `ComponentWillMount` can be called here and can be used for any clean up that needs doing.
+
+
 - [ ] Explain the details of a Higher Order Component?
+
+A Higher Order Component is essentially a function that receives a component as an argument and returns a new component. They are commonly used as advanced react patterns for designing components that share the same kind of behaviour or data. This makes them connected in a different way than the normal state to props pattern. With HOC we can share functionality between components. An example is the functionality to a Login component. This component could be a form that accepts user input such as a username and password and performs a check on the database to make sure that this user lives on the system. If it does, and the password is correct the app would log them in and show the content the user has access to. In this example the HOC is the component that renders either a Login component or the entire App component. 
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+You can use: external files, use the id or class name or you can use Styled Components. If you are working somewhere and your team has a css/less/saas specialist, the best idea for styling would be to have external files. It is easier for the specialist to have an external file and the specialist taking care of all the styling. If we don’t have a specialist but we have external files, the way we would do styling is by using the id or classnames. Just as we normally would. Styled Components is a library for writing CSS witin JS files. This way it gives us the abaility to keep all of our code in the same files, rather than having external files for styling. I also found it a lot easier as it mush easier to keep track of the styling when writing the styled components in the same files we want the styling to go, plus not having to use className or id.
 
 ## Project Setup
 
