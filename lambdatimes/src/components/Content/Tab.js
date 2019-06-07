@@ -1,4 +1,5 @@
 import React from 'react';
+import pt from 'prop-types';
 
 const Tab = props => {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
@@ -7,11 +8,14 @@ const Tab = props => {
  if (props.tab)
   return (
     <div
-      className= { props.selected === props.selectedTab  ? 'tab active-tab' : 'tab'}
-      onClick={(tab) => props.seleTabHandler(tab, props.tab)
+      onClick={(tab) => {
+        props.selectTabHandler(props.tab)
+      } 
         /* Replace this dummy click handler function with your selectTabHandler function from props 
-         you'll need to pass the `tab` in as an argument to this handler. */
+        you'll need to pass the `tab` in as an argument to this handler. */
       }
+      className={ props.selected === props.selectedTab  ? 'tab active-tab' : 'tab'}
+      
     >
       {props.tab.toUpperCase()}
     </div>
@@ -19,5 +23,12 @@ const Tab = props => {
 };
 
 // Make sure you include PropTypes on your props.
+
+Tab.propTypes = {
+  tabData: pt.arrayOf(pt.string),
+  tab: pt.string,
+  selectedTab: pt.string,
+  className: pt.string,
+}
 
 export default Tab;
